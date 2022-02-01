@@ -296,6 +296,199 @@ section .redes {
     color: whitesmoke;
 }
 
+
+/* NOSOTROS */
+
+body.nosotros section {
+    grid-area: pageNosotros;
+}
+
+body.nosotros {
+    display: grid;
+    font-size: 1.6rem;
+    grid-template-areas: "header" "pageNosotros" "footer";
+}
+
+article.nosotros {
+    display: flex;
+    flex-direction: column;
+}
+
+article.nosotros img {
+    padding: 2rem;
+    width: 100%;
+}
+
+.textoNosotros {
+    text-align: justify;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+article.staff h3 {
+    font-weight: bold;
+    font-size: 2.8rem;
+    text-decoration: underline;
+    margin-bottom: 1.3rem;
+    text-align: center;
+}
+
+.staffCaracteristicas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1.6rem
+}
+
+.staffCaracteristicas div {
+    font-size: 2rem;
+    padding: 1.3rem;
+    font-weight: bold;
+}
+
+.nosotrosMail {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+
+/* PROPIEDADES */
+
+body.bodyPropiedades main {
+    grid-area: pagePropiedades;
+}
+
+body.bodyPropiedades {
+    display: grid;
+    font-size: 1.6rem;
+    grid-template-areas: "header" "pagePropiedades" "footer";
+}
+
+body.bodyPropiedades .sectionPropiedades img {
+    width: 100%;
+}
+
+.sectionFormulario form fieldset {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: lightgray;
+    margin-bottom: 2rem;
+}
+
+.sectionFormulario form fieldset select,
+.sectionFormulario form fieldset input[type="button"] {
+    padding: 1.2rem;
+    margin: .8rem;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.sectionFormulario form fieldset input[type="button"] {
+    width: 40%;
+    margin: 2rem auto 1rem;
+}
+
+body.bodyPropiedades main section.sectionPropiedades .propiedad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+body.bodyPropiedades main section.sectionPropiedades .propiedad .propiedadDatos h4,
+body.bodyPropiedades main section.sectionPropiedades .propiedad .propiedadDatos p {
+    margin-bottom: 1rem;
+}
+
+body.bodyPropiedades main section.sectionPropiedades .propiedad .propiedadDatos span svg {
+    margin: 0 1.2rem;
+}
+
+
+/* EMPRENDIMIENTOS */
+
+body.bodyEmprendimientos section {
+    grid-area: pageEmprendimientos;
+}
+
+body.bodyEmprendimientos {
+    display: grid;
+    font-size: 1.6rem;
+    grid-template-areas: "header" "pageEmprendimientos" "footer";
+}
+
+body.bodyEmprendimientos .sectionEmprendimiento img {
+    width: 80%;
+}
+
+.emprendimientoDestacado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.emprendimientoDestacado .icon-tabler-star {
+    position: absolute;
+    left: 3rem;
+    top: 1rem;
+}
+
+.emprendimientoDestacadoDatos {
+    display: flex;
+    flex-direction: column;
+}
+
+.emprendimientoDestacadoDatosPrincipal {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding: 1.2rem;
+}
+
+.caracteisticasDepartamentos {
+    font-style: italic;
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+
+.caracteisticasDepartamentos ul {
+    margin: 1.2rem 0;
+}
+
+.emprendimiento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.datosEmprendimiento {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoEmprendimiento {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.3rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.datosEmprendimiento p {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
 @media screen and (min-width: 768px) {
     body.index {
         grid-template-columns: 20% auto;
@@ -334,6 +527,28 @@ section .redes {
     /*  HERO  */
     .hero {
         height: 100vh;
+    }
+    body.nosotros {
+        grid-template-columns: 20% auto;
+        grid-template-areas: "header pageNosotros" "header footer";
+    }
+    .staffCaracteristicas {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    body.bodyPropiedades {
+        grid-template-columns: 20% auto;
+        grid-template-areas: "header pagePropiedades" "header footer";
+    }
+    body.bodyPropiedades .sectionPropiedades img {
+        width: 70%;
+    }
+    body.bodyEmprendimientos {
+        grid-template-columns: 20% auto;
+        grid-template-areas: "header pageEmprendimientos" "header footer";
+    }
+    body.bodyEmprendimientos .sectionEmprendimiento img {
+        width: 70%;
     }
 }
 
@@ -549,78 +764,6 @@ section .redes {
     .footerMessage {
         grid-area: 1 / 3 / 2 / 4;
     }
-}
-
-
-/* NOSOTROS */
-
-body.nosotros section {
-    grid-area: pageNosotros;
-}
-
-body.nosotros {
-    display: grid;
-    font-size: 1.6rem;
-    grid-template-areas: "header" "pageNosotros" "footer";
-}
-
-article.nosotros {
-    display: flex;
-    flex-direction: column;
-}
-
-article.nosotros img {
-    padding: 2rem;
-    width: 100%;
-}
-
-.textoNosotros {
-    text-align: justify;
-    font-weight: bold;
-    font-size: 1.4rem;
-    margin-bottom: 2rem;
-}
-
-article.staff h3 {
-    font-weight: bold;
-    font-size: 2.8rem;
-    text-decoration: underline;
-    margin-bottom: 1.3rem;
-    text-align: center;
-}
-
-.staffCaracteristicas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 1.6rem
-}
-
-.staffCaracteristicas div {
-    font-size: 2rem;
-    padding: 1.3rem;
-    font-weight: bold;
-}
-
-.nosotrosMail {
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.4rem;
-}
-
-@media screen and (min-width: 768px) {
-    body.nosotros {
-        grid-template-columns: 20% auto;
-        grid-template-areas: "header pageNosotros" "header footer";
-    }
-    .staffCaracteristicas {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-}
-
-@media screen and (min-width: 1280px) {
     body.nosotros {
         grid-template-columns: auto;
         grid-template-areas: "header" "pageNosotros" "footer";
@@ -629,77 +772,6 @@ article.staff h3 {
         flex-direction: row;
         align-items: center;
     }
-}
-
-
-/* PROPIEDADES */
-
-body.bodyPropiedades main {
-    grid-area: pagePropiedades;
-}
-
-body.bodyPropiedades {
-    display: grid;
-    font-size: 1.6rem;
-    grid-template-areas: "header" "pagePropiedades" "footer";
-}
-
-body.bodyPropiedades .sectionPropiedades img {
-    width: 100%;
-}
-
-.sectionFormulario form fieldset {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    background-color: lightgray;
-    margin-bottom: 2rem;
-}
-
-.sectionFormulario form fieldset select,
-.sectionFormulario form fieldset input[type="button"] {
-    padding: 1.2rem;
-    margin: .8rem;
-    font-weight: bold;
-    text-align: center;
-    font-size: 1.8rem;
-}
-
-.sectionFormulario form fieldset input[type="button"] {
-    width: 40%;
-    margin: 2rem auto 1rem;
-}
-
-body.bodyPropiedades main section.sectionPropiedades .propiedad {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    font-size: 2rem;
-}
-
-body.bodyPropiedades main section.sectionPropiedades .propiedad .propiedadDatos h4,
-body.bodyPropiedades main section.sectionPropiedades .propiedad .propiedadDatos p {
-    margin-bottom: 1rem;
-}
-
-body.bodyPropiedades main section.sectionPropiedades .propiedad .propiedadDatos span svg {
-    margin: 0 1.2rem;
-}
-
-@media screen and (min-width: 768px) {
-    body.bodyPropiedades {
-        grid-template-columns: 20% auto;
-        grid-template-areas: "header pagePropiedades" "header footer";
-    }
-    body.bodyPropiedades .sectionPropiedades img {
-        width: 70%;
-    }
-}
-
-@media screen and (min-width: 1280px) {
     body.bodyPropiedades {
         grid-template-columns: auto;
         grid-template-areas: "header" "pagePropiedades" "footer";
@@ -724,96 +796,6 @@ body.bodyPropiedades main section.sectionPropiedades .propiedad .propiedadDatos 
         flex-direction: row;
         justify-content: space-evenly;
     }
-}
-
-
-/* EMPRENDIMIENTOS */
-
-body.bodyEmprendimientos section {
-    grid-area: pageEmprendimientos;
-}
-
-body.bodyEmprendimientos {
-    display: grid;
-    font-size: 1.6rem;
-    grid-template-areas: "header" "pageEmprendimientos" "footer";
-}
-
-body.bodyEmprendimientos .sectionEmprendimiento img {
-    width: 80%;
-}
-
-.emprendimientoDestacado {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.emprendimientoDestacado .icon-tabler-star {
-    position: absolute;
-    left: 3rem;
-    top: 1rem;
-}
-
-.emprendimientoDestacadoDatos {
-    display: flex;
-    flex-direction: column;
-}
-
-.emprendimientoDestacadoDatosPrincipal {
-    display: flex;
-    justify-content: space-around;
-    font-weight: bold;
-    font-size: 1.8rem;
-    padding: 1.2rem;
-}
-
-.caracteisticasDepartamentos {
-    font-style: italic;
-    font-size: 1.8rem;
-    padding: 1rem;
-}
-
-.caracteisticasDepartamentos ul {
-    margin: 1.2rem 0;
-}
-
-.emprendimiento {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.datosEmprendimiento {
-    display: flex;
-    flex-direction: column;
-}
-
-.infoEmprendimiento {
-    display: flex;
-    justify-content: space-around;
-    padding: 1.3rem;
-    font-weight: bold;
-    font-size: 1.8rem;
-}
-
-.datosEmprendimiento p {
-    font-style: italic;
-    margin-bottom: 1.5rem;
-}
-
-@media screen and (min-width: 768px) {
-    body.bodyEmprendimientos {
-        grid-template-columns: 20% auto;
-        grid-template-areas: "header pageEmprendimientos" "header footer";
-    }
-    body.bodyEmprendimientos .sectionEmprendimiento img {
-        width: 70%;
-    }
-}
-
-@media screen and (min-width: 1280px) {
     body.bodyEmprendimientos {
         grid-template-columns: auto;
         grid-template-areas: "header" "pageEmprendimientos" "footer";
