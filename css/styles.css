@@ -82,6 +82,7 @@ div.logotipo {
     height: 88vh;
     grid-area: hero;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     background-image: url(../assets/imagenes/heroMovil.jpeg);
@@ -99,24 +100,43 @@ div.logotipo {
     line-height: 5rem;
     color: black;
     padding: 5rem;
-    background-color: rgba(211, 211, 211, .2);
+    background-color: rgba(211, 211, 211, .5);
+    opacity: 0;
+    animation-name: opacidad;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: unset;
 }
 
-.heroMessage button {
-    padding: 1rem 1.2rem;
-    border-radius: .3rem;
-    border: .1rem solid black;
+.hero .flechaIngreso {
+    position: absolute;
+    display: block;
+    bottom: 8rem;
+    margin: 0 auto;
+    opacity: 0;
+    animation-name: opacidad, flechaBienvenida;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
 }
 
-.heroMessage button a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 2rem;
+.hero .flechaIngreso button {
+    border: none;
 }
 
-.accesoEscritorio {
+.hero .flechaIngreso .accesoMovil {
+    display: block;
+    background-color: transparent;
+}
+
+.hero .flechaIngreso .accesoEscritorio {
     display: none;
+    background-color: transparent;
 }
 
 
@@ -209,6 +229,7 @@ div.logotipo {
 
 .propiedadEspecial {
     position: relative;
+    animation: propiedadDestacada 1.5s ease-in-out infinite;
 }
 
 .propiedadEspecial span {
@@ -266,8 +287,24 @@ div.logotipo {
     justify-content: space-evenly;
 }
 
+.contactoRedes a {
+    transition: transform .5s ease-in;
+}
+
+.contactoRedes a:focus {
+    transform: scale(1.5);
+}
+
 .indexFormulario {
     grid-area: contacto;
+}
+
+.btnEnviar:hover {
+    box-shadow: .5rem .5rem 1rem .5rem black;
+}
+
+.indexFormulario .btnEnviar {
+    transition: box-shadow .5s ease-out;
 }
 
 
@@ -491,6 +528,7 @@ body.bodyEmprendimientos .sectionEmprendimiento img {
 
 @media screen and (min-width: 768px) {
     body.index {
+        overflow-x: hidden;
         grid-template-columns: 20% auto;
         grid-template-areas: "header hero" "header emprendimiento" "header propiedades" "header nosotros" "header contacto" "header footer";
     }
@@ -550,6 +588,10 @@ body.bodyEmprendimientos .sectionEmprendimiento img {
     body.bodyEmprendimientos .sectionEmprendimiento img {
         width: 70%;
     }
+    body.bodyContacto {
+        grid-template-columns: 20% auto;
+        grid-template-areas: "header pageContacto" "header footer";
+    }
 }
 
 @media screen and (min-width: 1280px) {
@@ -591,7 +633,6 @@ body.bodyEmprendimientos .sectionEmprendimiento img {
         position: relative;
         width: 100vw;
         height: 100vh;
-        overflow: hidden;
         background-image: None;
     }
     .hero video {
@@ -613,12 +654,11 @@ body.bodyEmprendimientos .sectionEmprendimiento img {
         color: whitesmoke;
         background-color: rgba(211, 211, 211, .2);
     }
-    .accesoMovil {
+    .hero .flechaIngreso .accesoMovil {
         display: none;
     }
-    .accesoEscritorio {
+    .hero .flechaIngreso .accesoEscritorio {
         display: block;
-        margin: 0 auto;
     }
     /* PROPIEDADES */
     .indexPropiedades {
@@ -693,6 +733,11 @@ body.bodyEmprendimientos .sectionEmprendimiento img {
         font-size: 1.5rem;
         padding: 2rem;
         border: .2rem solid lightslategray;
+        transition: all .5s ease-out;
+    }
+    .indexNosotros article:hover {
+        transform: scale(1.2);
+        background-color: lightgray;
     }
     /* CONTACTO */
     .formulario .texto-formulario,
@@ -818,6 +863,26 @@ body.bodyEmprendimientos .sectionEmprendimiento img {
     .datosEmprendimiento {
         padding: 5rem;
     }
+    .propiedadEspecial:hover {
+        animation: none;
+        box-shadow: 0 0 5rem 1rem gray;
+    }
+    body.bodyContacto {
+        grid-template-columns: auto;
+        grid-template-areas: "header" "pageContacto" "footer";
+    }
+    body.bodyContacto section.formularioContacto fieldset {
+        display: flex;
+        padding: 2rem;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    body.bodyContacto .contacto {
+        font-size: 2.2rem;
+    }
+    body.bodyContacto .redesContacto {
+        display: none;
+    }
 }
 
 
@@ -881,28 +946,35 @@ body.bodyContacto .redesContacto div {
     margin-top: 2rem;
 }
 
-@media screen and (min-width: 768px) {
-    body.bodyContacto {
-        grid-template-columns: 20% auto;
-        grid-template-areas: "header pageContacto" "header footer";
+
+/** ANIMACIONES **/
+
+@keyframes opacidad {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
-@media screen and (min-width: 1280px) {
-    body.bodyContacto {
-        grid-template-columns: auto;
-        grid-template-areas: "header" "pageContacto" "footer";
+@keyframes flechaBienvenida {
+    0% {
+        transform: translateY(0rem);
     }
-    body.bodyContacto section.formularioContacto fieldset {
-        display: flex;
-        padding: 2rem;
-        margin: 0 auto;
-        flex-direction: column;
+    100% {
+        transform: translateY(7rem);
     }
-    body.bodyContacto .contacto {
-        font-size: 2.2rem;
+}
+
+@keyframes propiedadDestacada {
+    0% {
+        transform: rotate(-2deg);
     }
-    body.bodyContacto .redesContacto {
-        display: none;
+    50% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(-2deg);
     }
 }
