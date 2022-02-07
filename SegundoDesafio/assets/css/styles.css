@@ -1,0 +1,345 @@
+/*  RESET  */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*  GLOBALES  */
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: wheat;
+    font-family: 'Krub', sans-serif;
+    position: relative;
+}
+
+body .whatsApp {
+    display: none;
+}
+
+
+/* HEADER */
+
+header .mensaje-envio {
+    display: block;
+    overflow-x: hidden;
+}
+
+header .mensaje-envio p {
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    animation: mover-texto 10s infinite linear;
+}
+
+@keyframes mover-texto {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+header .mensaje-cuotas p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+header .mensaje-cuotas p:before {
+    content: "";
+    animation: animar-cuotas infinite 6s linear;
+    padding-right: .5rem;
+}
+
+@keyframes animar-cuotas {
+    0% {
+        content: "3";
+    }
+    50% {
+        content: "6";
+    }
+    100% {
+        content: "12";
+    }
+}
+
+header div.row:first-child {
+    background-color: wheat;
+}
+
+header nav.navegacion ul li a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+}
+
+header nav.navegacion ul li a img {
+    width: 2.8rem;
+    padding-right: 1rem;
+}
+
+header nav.navegacion a.titulo-movil {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: black;
+    font-family: 'Comforter', cursive;
+}
+
+header .navegacion ul li.item-oculto {
+    display: none;
+}
+
+header nav.navegacion button {
+    background-color: lightgray;
+    padding: 1.3rem;
+    border: .2rem solid lightslategray;
+}
+
+
+/** MAIN **/
+
+main.contenido-principal section div.informacion {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+main.contenido-principal section div.informacion .mensaje {
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+main.contenido-principal section div.informacion .mensaje p {
+    margin: 0;
+    border-left: .2rem solid #000;
+    padding-left: 1rem;
+}
+
+main.contenido-principal section div.informacion .mensaje img {
+    width: 5rem;
+    padding: 1rem;
+}
+
+main.contenido-principal section div.ropa h2.cabecera-ropa {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: 'Comforter', cursive;
+}
+
+main.contenido-principal section div.ropa div.contenedor-ropa {
+    margin: 3rem 0;
+    display: grid;
+    text-align: center;
+}
+
+main.contenido-principal section div.ropa div.contenedor-ropa img {
+    width: 60%;
+}
+
+main.contenido-principal section div.ropa div.contenedor-ropa .box {
+    position: relative;
+    margin: 3rem 0;
+}
+
+main.contenido-principal section div.ropa div.contenedor-ropa .box .box-compra {
+    font-weight: bold;
+    font-size: 1.5rem;
+    bottom: 3rem;
+    width: 100%;
+}
+
+main.contenido-principal section div.ropa div.contenedor-ropa .box .box-compra a {
+    color: black;
+}
+
+footer {
+    color: wheat;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Comforter', cursive;
+}
+
+
+/** PRENDA **/
+
+main.contenedor-prenda form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+main.contenedor-prenda form fieldset {
+    margin: 0 auto;
+    width: 80%;
+}
+
+main.contenedor-prenda form .control {
+    display: flex;
+    padding: .5rem 0;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+main.contenedor-prenda form .control select,
+main.contenedor-prenda form .control input {
+    padding: .5rem;
+    font-weight: bold;
+}
+
+main.contenedor-prenda .contenedor-imagen {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+main.contenedor-prenda .contenedor-imagen p {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+main.contenedor-prenda section img {
+    width: 80%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+    /** HEADER **/
+    header .mensaje-envio p {
+        animation-duration: 20s;
+    }
+    @keyframes mover-texto {
+        0% {
+            transform: translateX(-5%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+    header nav.navegacion a.titulo-movil {
+        display: none;
+    }
+    header .navegacion ul li.item-oculto {
+        display: block;
+    }
+    header .navegacion ul li:nth-child(2) a {
+        font-size: 4rem;
+        font-family: 'Comforter', cursive;
+    }
+    body .whatsApp {
+        display: block;
+        position: fixed;
+        right: 3rem;
+        bottom: 10rem;
+        width: 5rem;
+        z-index: 1;
+    }
+    /** MAIN **/
+    main.contenido-principal section div.informacion {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    main.contenido-principal section div.informacion .mensaje {
+        padding: 1.5rem;
+        font-size: 2rem;
+    }
+    main.contenido-principal section div.informacion .mensaje p {
+        padding-left: 1.5rem;
+    }
+    main.contenido-principal section div.ropa .contenedor {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    main.contenido-principal section div.ropa div.contenedor-ropa {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-gap: 1rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+    main.contenido-principal section div.ropa div.contenedor-ropa .catalogo-1 {
+        grid-area: 2 / 1 / 6 / 3;
+    }
+    main.contenido-principal section div.ropa div.contenedor-ropa .catalogo-2 {
+        grid-area: 1 / 4 / 4 / 6;
+    }
+    main.contenido-principal section div.ropa div.contenedor-ropa .catalogo-3 {
+        grid-area: 2 / 7 / 6 / 9;
+    }
+    main.contenido-principal section div.ropa div.contenedor-ropa .catalogo-4 {
+        grid-area: 5 / 4 / 9 / 6;
+    }
+    main.contenido-principal section div.ropa div.contenedor-ropa img {
+        width: 100%;
+    }
+    main.contenido-principal section div.ropa div.contenedor-ropa .box .box-compra {
+        position: absolute;
+        opacity: 0;
+    }
+    main.contenido-principal section div.ropa div.contenedor-ropa .box .box-compra {
+        width: 100%;
+        background-color: rgba(211, 211, 211, 0.2);
+        padding: 1rem 0;
+    }
+    main.contenido-principal section div.ropa div.contenedor-ropa .box:hover .box-compra {
+        animation: move-text 1s linear;
+        animation-fill-mode: forwards;
+    }
+    @keyframes move-text {
+        0% {
+            opacity: 0;
+            transform: translateY(0rem);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(-7.5rem);
+        }
+    }
+    footer {
+        justify-content: space-around;
+    }
+    /* PRENDA */
+    main.contenedor-prenda form fieldset {
+        width: 100%;
+        display: flex;
+    }
+    main.contenedor-prenda form .control {
+        flex-grow: 1;
+        padding: 0 1rem;
+        font-size: 2rem;
+    }
+    main.contenedor-prenda .contenedor-imagenes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3.5rem;
+    }
+    main.contenedor-prenda section img {
+        width: 60%;
+    }
+}

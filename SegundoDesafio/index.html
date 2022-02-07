@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&display=swap" rel="stylesheet">
+    <!-- Bootstrap / styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Station Clothes</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="container-fluid">
+        <div class="row sticky-top">
+            <div class="row bg-dark">
+                <div class="col-12 col-md-10 m-auto">
+                    <div class="mensaje-envio">
+                        <p>¡Envío Gratuito!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-10 m-auto">
+                    <div class="mensaje-cuotas">
+                        <p>Cuotas sin interes todos los días!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <nav class="navbar navbar-expand-md navegacion navbar-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand titulo-movil" href="./index.html">
+                            <h1>Station Clothes</h1>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav d-flex w-100 justify-content-around align-items-center">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><img src="./assets/images/search.svg" alt="Boton Busqueda">Buscar</a>
+                                </li>
+                                <li class="nav-item item-oculto">
+                                    <a class="navbar-brand" href="./index.html">Station Clothes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><img src="./assets/images/cart.svg" alt="Boton Carrito">Carrito</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-12 m-auto">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/images/carrousel-1.webp" class="d-block w-100" alt="Oferta remeras">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/carrousel-2.webp" class="d-block w-100" alt="Oferta descuento">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/carrousel-3.webp" class="d-block w-100" alt="Oferta cuotas">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main class="container-fluid contenido-principal">
+        <section class="row">
+            <div class="col-12 col-md-10 m-auto informacion">
+                <div class="mensaje">
+                    <img src="./assets/images/arrow-repeat.svg" alt="Devolucion">
+                    <p>Cambio y devolución gratis</p>
+                </div>
+                <div class="mensaje">
+                    <img src="./assets/images/phone.svg" alt="Aplicacion">
+                    <p>Descarga nuestra app</p>
+                </div>
+                <div class="mensaje">
+                    <img src="./assets/images/cash-stack.svg" alt="Pago">
+                    <p>Multiples formas de pago</p>
+                </div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-12 col-md-10 m-auto ropa">
+                <h2 class="cabecera-ropa">Encontrá tu prenda favorita</h2>
+                <div class="row contenedor">
+                    <div class="contenedor-ropa">
+                        <div class="box catalogo-1">
+                            <a href="./pages/prenda.html"><img src="./assets/images/ropa-1.webp" alt="Imagen catalogo"></a>
+                            <div class="box-compra">
+                                <p>Remera de estacion</p>
+                                <a href="./pages/prenda.html">Comprar</a>
+                            </div>
+                        </div>
+                        <div class="box catalogo-2">
+                            <a href="./pages/prenda.html"><img src="./assets/images/ropa-2.webp" alt="Imagen catalogo"></a>
+                            <div class="box-compra">
+                                <p>Remera de estacion</p>
+                                <a href="./pages/prenda.html">Comprar</a>
+                            </div>
+                        </div>
+                        <div class="box catalogo-3">
+                            <a href="./pages/prenda.html"><img src="./assets/images/ropa-1.webp" alt="Imagen catalogo"></a>
+                            <div class="box-compra">
+                                <p>Remera de estacion</p>
+                                <a href="./pages/prenda.html">Comprar</a>
+                            </div>
+                        </div>
+                        <div class="box catalogo-4">
+                            <a href="./pages/prenda.html"><img src="./assets/images/ropa-4.webp" alt="Imagen catalogo"></a>
+                            <div class="box-compra">
+                                <p>Remera de estacion</p>
+                                <a href="./pages/prenda.html">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="container-fluid p-4 contenido-principal">
+        <p>Station Clothes</p>
+        <div class="footerMessage">
+            <p>&copy; Copyright 2021</p>
+            <h4>Made with <span style="color: #e25555;">&#9829;</span> by Lautaro</h4>
+        </div>
+    </footer>
+    <span class="whatsApp"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="64" height="64" viewBox="0 0 24 24" stroke-width="2" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+        <path d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" />
+      </svg></span>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

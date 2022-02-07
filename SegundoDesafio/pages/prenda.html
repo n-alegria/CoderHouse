@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&display=swap" rel="stylesheet">
+    <!-- Bootstrap / styles -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Station Clothes</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="container-fluid">
+        <div class="row sticky-top">
+            <div class="row bg-dark">
+                <div class="col-12 col-md-10 m-auto">
+                    <div class="mensaje-envio">
+                        <p>¡Envío Gratuito!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-10 m-auto">
+                    <div class="mensaje-cuotas">
+                        <p>Cuotas sin interes todos los días!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <nav class="navbar navbar-expand-md navegacion navbar-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand titulo-movil" href="./index.html">
+                            <h1>Station Clothes</h1>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav d-flex w-100 justify-content-around align-items-center">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><img src="../assets/images/search.svg" alt="Boton Busqueda">Buscar</a>
+                                </li>
+                                <li class="nav-item item-oculto">
+                                    <a class="navbar-brand" href="../index.html">Station Clothes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><img src="../assets/images/cart.svg" alt="Boton Carrito">Carrito</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main class="container-fluid contenedor-prenda">
+        <section class="col-12 col-md-8 m-auto">
+            <form action="#" method="#">
+                <fieldset>
+                    <div class="control">
+                        <label for="talle">Seleccione un talle:</label>
+                        <select id="talles" name="talle">
+                    <option value="small">Pequeño</option>
+                    <option value="medium">Mediano</option>
+                    <option value="large">Largo</option>
+                    </select>
+                    </div>
+                    <div class="control">
+                        <label for="color">Seleccione un color:</label>
+                        <select id="colores" name="color">
+                    <option value="rojo">Rojo</option>
+                    <option value="azul">Azul</option>
+                    <option value="verde">Verde</option>
+                    </select>
+                    </div>
+                    <div class="control">
+                        <input type="submit" value="Buscar">
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        <section class="col-12 col-md-10 m-auto contenedor-imagenes">
+            <article class="contenedor-imagen">
+                <img src="../assets/images/remera-venta.jpeg" alt="Imagen mujer remera">
+                <p>Precio: $1500</p>
+            </article>
+            <article class="contenedor-imagen">
+                <img src="../assets/images/remera-venta2.webp" alt="Imagen mujer remera">
+                <p>Precio: $2500</p>
+            </article>
+            <article class="contenedor-imagen">
+                <img src="../assets/images/remera-venta3.jpeg" alt="Imagen mujer remera">
+                <p>Precio: $800</p>
+            </article>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="container-fluid p-4">
+        <p>Station Clothes</p>
+        <div class="footerMessage">
+            <p>&copy; Copyright 2021</p>
+            <h4>Made with <span style="color: #e25555;">&#9829;</span> by Lautaro</h4>
+        </div>
+    </footer>
+    <span class="whatsApp"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="64" height="64" viewBox="0 0 24 24" stroke-width="2" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+        <path d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" />
+      </svg></span>
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
