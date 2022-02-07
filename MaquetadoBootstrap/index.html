@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap / styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>lautaro.dev</title>
+</head>
+
+<body>
+    <header class="container-fluid bg-dark">
+        <div class="row justify-content-center align-content-center">
+            <div class="col-sm-12 col-md-10 col-lg-8 m-auto header">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="./index.html"><img class="logo-empresa" src="./assets/images/logo.png" alt="Logo empresarial"></a>
+                        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-uppercase fs-2 fw-bold text-light" aria-current="page" href="/pages/portfolio.html">Portfolio</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="col-12 col-md-10 col-lg-10 m-auto my-5">
+        <div class="row">
+            <section class="hero">
+                <div class="message-welcome text-center">
+                    <div class="message">
+                        <h1>Desarrollador Jr.</h1>
+                        <h2>Lautaro Alegria</h2>
+                    </div>
+                    <button class="arrow">
+                            <a href="#carrousel"><svg xmlns="http://www.w3.org/2000/svg" class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16">
+                                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0z"/>
+                                </svg>
+                            </a>
+                    </button>
+                    <img id="html" class="lenguaje rotate-right" src="assets/images/html.png" alt="Logo HTML">
+                    <img id="css" class="lenguaje rotate-right" src="assets/images/css.png" alt="Logo CSS">
+                    <img id="js" class="lenguaje rotate-left" src="assets/images/js.png" alt="Logo JavaScript">
+                    <img id="php" class="lenguaje rotate-left" src="assets/images/php.png" alt="Logo PHP">
+                    <img id="python" class="lenguaje" src="assets/images/python.png" alt="Logo Python">
+                </div>
+            </section>
+            <section class="carrousel" id="carrousel">
+                <h2 class="display-2 text-center p-3 text-uppercase text-decoration-underline fw-bold">Trabajos</h2>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://place.dog/400/200" class="d-block w-100" alt="Imagen perro">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="http://placekitten.com/400/200" class="d-block w-100" alt="Imagen gato">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://place.dog/400/200" class="d-block w-100" alt="Imagen perro">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="container-fluid bg-dark py-3">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-lg-8 m-auto d-flex justify-content-between align-items-center text-white">
+                <a class="navbar-brand" href="./index.html"><img class="logo-empresa" src="./assets/images/logo.png" alt="Logo empresarial"></a>
+                <div class="footerMessage">
+                    <p>&copy; Copyright 2021</p>
+                    <h4>Made with <span style="color: #e25555;">&#9829;</span> by Lautaro</h4>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
