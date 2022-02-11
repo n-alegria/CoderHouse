@@ -1,0 +1,25 @@
+.rotate-right {
+    transform: rotate(5deg);
+}
+
+.rotate-left {
+    transform: rotate(-5deg);
+}
+
+@keyframes opacidad {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: .50;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,50 @@
+/** PORTFOLIO **/
+
+.portfolio .articulo-portfolio {
+    background-color: lightcyan;
+    padding: 2rem;
+    border: .2rem solid gray;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.portfolio .articulo-portfolio a {
+    text-decoration: none;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        height: 10vh;
+    }
+    main {
+        height: 90vh;
+    }
+    section.hero .message-welcome .message h1 {
+        font-size: 5rem;
+    }
+    section.hero .message-welcome .message h2 {
+        font-size: 3rem;
+    }
+    section.hero button.arrow a svg {
+        width: 8rem;
+    }
+    .lenguaje {
+        width: 10rem;
+    }
+    #html {
+        left: 15rem;
+    }
+    #css {
+        left: 15rem;
+    }
+    #js {
+        right: 15rem;
+    }
+    #php {
+        right: 15rem;
+    }
+    .portfolio .articulo-portfolio {
+        font-size: 1.5rem;
+    }
+}

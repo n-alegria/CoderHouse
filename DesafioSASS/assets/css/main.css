@@ -1,0 +1,137 @@
+/*  RESET  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+/*  GLOBALES  */
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
+  html body {
+    background-color: lightblue;
+    font-family: 'Krub', sans-serif; }
+
+#html {
+  position: absolute;
+  top: 5rem;
+  left: 5rem; }
+
+#css {
+  position: absolute;
+  bottom: 5rem;
+  left: 5rem; }
+
+#js {
+  position: absolute;
+  top: 5rem;
+  right: 5rem; }
+
+#php {
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem; }
+
+#python {
+  position: absolute;
+  top: 20%;
+  margin: 0 auto; }
+
+.rotate-right {
+  transform: rotate(5deg); }
+
+.rotate-left {
+  transform: rotate(-5deg); }
+
+@keyframes opacidad {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: .50; }
+  50% {
+    opacity: 1; }
+  75% {
+    opacity: .25; }
+  100% {
+    opacity: 0; } }
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 10vh; }
+  main {
+    height: 90vh; }
+    main section.hero .message-welcome .message h1 {
+      font-size: 5rem; }
+    main section.hero .message-welcome .message h2 {
+      font-size: 3rem; }
+    main section.hero button.arrow a svg {
+      width: 8rem; }
+    main .lenguaje {
+      width: 10rem; }
+  #html {
+    left: lenguajeSize; }
+  #css {
+    left: lenguajeSize; }
+  #js {
+    right: lenguajeSize; }
+  #php {
+    right: lenguajeSize; }
+  .portfolio .articulo-portfolio {
+    font-size: 1.5rem; } }
+
+/* HEADER */
+header {
+  height: 15vh;
+  padding: 3rem; }
+  header div {
+    height: 100%; }
+    header div nav {
+      height: 100%; }
+      header div nav .logo-empresa {
+        width: 5rem;
+        height: 5rem; }
+
+/* MAIN */
+section.hero {
+  width: 100%; }
+  section.hero .message-welcome {
+    height: 85vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    section.hero .message-welcome .message h1 {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 4rem; }
+    section.hero .message-welcome .message h2 {
+      font-size: 2rem; }
+    section.hero .message-welcome button.arrow {
+      position: absolute;
+      display: block;
+      bottom: 15rem;
+      margin: 0 auto;
+      text-align: center;
+      border: none;
+      opacity: 0;
+      background-color: transparent;
+      animation: opacidad 1.5s infinite ease-in-out; }
+      section.hero .message-welcome button.arrow a {
+        width: 100%;
+        display: block; }
+        section.hero .message-welcome button.arrow a svg {
+          width: 6rem; }
+    section.hero .message-welcome .lenguaje {
+      width: 8rem; }
+
+/** PORTFOLIO **/
+.portfolio .articulo-portfolio {
+  background-color: lightcyan;
+  padding: 2rem;
+  border: .2rem solid gray;
+  font-weight: bold;
+  font-size: 1rem; }
+  .portfolio .articulo-portfolio a {
+    text-decoration: none;
+    padding: 1rem; }

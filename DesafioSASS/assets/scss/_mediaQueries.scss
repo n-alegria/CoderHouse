@@ -1,0 +1,48 @@
+$lenguajeSize: 15rem;
+@media screen and (min-width: 768px) {
+    header {
+        height: 10vh;
+    }
+    main {
+        height: 90vh;
+        section.hero {
+            .message-welcome {
+                .message {
+                    h1 {
+                        font-size: 5rem;
+                    }
+                    h2 {
+                        font-size: 3rem;
+                    }
+                }
+            }
+            button.arrow {
+                a {
+                    svg {
+                        width: 8rem;
+                    }
+                }
+            }
+        }
+        .lenguaje {
+            width: 10rem;
+        }
+    }
+    #html {
+        left: lenguajeSize;
+    }
+    #css {
+        left: lenguajeSize;
+    }
+    #js {
+        right: lenguajeSize;
+    }
+    #php {
+        right: lenguajeSize;
+    }
+    .portfolio {
+        .articulo-portfolio {
+            font-size: 1.5rem;
+        }
+    }
+}
