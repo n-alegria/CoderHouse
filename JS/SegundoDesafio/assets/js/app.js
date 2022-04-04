@@ -1,4 +1,4 @@
-// alert('Bienvenido a CriptoChange');
+alert('Bienvenido a CriptoChange');
 
 // Arrow functions
 const cobrarComision = (pesos, comision) => { return pesos * ((100 - comision) / 100) }
